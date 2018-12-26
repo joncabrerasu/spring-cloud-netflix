@@ -29,4 +29,14 @@ Dependencies:
 </dependency>
 ```
 
+The Git-backed configuration API provided by our server can be queried using the following paths:
+
+```
+/{application}/{profile}[/{label}]
+/{application}-{profile}.yml
+/{label}/{application}-{profile}.yml
+/{application}-{profile}.properties
+/{label}/{application}-{profile}.properties
+```
+
 

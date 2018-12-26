@@ -19,6 +19,15 @@ Dependencies:
 </dependency>
 ```
 
+Project setup for Spring Cloud Config:
+
+```
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-config</artifactId>
+</dependency>
+```
+
 Account Controller is a @RestController that manages Account Operations.
 
 Next, we have to set-up an application.yml with a configured Spring application name to uniquely identify our client in the list of registered applications.
@@ -40,3 +49,24 @@ eureka:
 ```    
 
 Now we will run the client and point our browser to http://localhost:8761 again, to see its registration status on the Eureka Dashboard.
+
+Retrieving Config from Spring Cloud Config Server.
+
+Add the dependency:
+```
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+```
+
+And next configuration to application yml:
+
+```
+spring:
+  application:
+    name: account-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+```
