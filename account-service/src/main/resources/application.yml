@@ -5,7 +5,7 @@ spring:
     config:
       uri: http://localhost:8888
 server:
-  port: 0
+  port: 33735
 eureka:
   client:
     serviceUrl:

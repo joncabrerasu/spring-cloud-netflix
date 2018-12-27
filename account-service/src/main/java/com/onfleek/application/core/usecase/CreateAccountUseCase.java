@@ -16,9 +16,9 @@ public class CreateAccountUseCase {
     }
 
     public Account createAccount(Account newAccount) {
-        Optional<Account> account = getAccount.getAccount(newAccount.username);
+        Optional<Account> account = getAccount.getAccount(newAccount.getUsername());
         if(account.isPresent()) {
-            throw new AccountAlreadyExistsException("Account with username " + newAccount.username + " already exists");
+            throw new AccountAlreadyExistsException("Account with username " + newAccount.getUsername() + " already exists");
         }
         return createAccount.createAccount(newAccount);
     }

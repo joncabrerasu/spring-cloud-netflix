@@ -5,11 +5,11 @@ import com.onfleek.application.core.usecase.GetAccount;
 
 import java.util.Optional;
 
-public class AccountMongoDataProvider implements GetAccount, CreateAccount {
+public class AccountDatabaseDataProvider implements GetAccount, CreateAccount {
 
     private final AccountMongoRepository accountMongoRepository;
 
-    public AccountMongoDataProvider(AccountMongoRepository accountMongoRepository) {
+    public AccountDatabaseDataProvider(AccountMongoRepository accountMongoRepository) {
         this.accountMongoRepository = accountMongoRepository;
     }
 
@@ -21,8 +21,7 @@ public class AccountMongoDataProvider implements GetAccount, CreateAccount {
     @Override
     public Optional<com.onfleek.application.core.entity.Account> getAccount(String username) {
         Account result = accountMongoRepository.findByUsername(username);
-
-        return Optional.of(mapAccount(result));
+        return result != null ? Optional.of(mapAccount(result)) : Optional.empty();
 
     }
 
@@ -35,7 +34,6 @@ public class AccountMongoDataProvider implements GetAccount, CreateAccount {
         result.setRole(account.getRole());
         return result;
     }
-
 
     private Account mapAccount(com.onfleek.application.core.entity.Account account) {
         Account result = new Account();

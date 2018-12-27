@@ -11,7 +11,7 @@ public class GetAccountUseCase {
         this.getAccount = getAccount;
     }
 
-    public Account getAccount(String username) throws Exception {
+    public Account getAccount(String username) {
         Optional<Account> account = getAccount.getAccount(username);
         if(!account.isPresent()) {
             throw new AccountNotFoundException("Account not found");
