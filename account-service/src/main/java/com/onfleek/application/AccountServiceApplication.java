@@ -1,8 +1,7 @@
-package com.onfleek.accountservice;
+package com.onfleek.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 public class AccountServiceApplication {

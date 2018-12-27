@@ -53,6 +53,7 @@ Now we will run the client and point our browser to http://localhost:8761 again,
 Retrieving Config from Spring Cloud Config Server.
 
 Add the dependency:
+
 ```
     <dependency>
         <groupId>org.springframework.cloud</groupId>
