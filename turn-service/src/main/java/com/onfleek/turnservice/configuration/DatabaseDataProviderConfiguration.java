@@ -1,7 +1,7 @@
 package com.onfleek.turnservice.configuration;
 
-import com.onfleek.turnservice.dataprovider.TurnDatabaseDataProvider;
-import com.onfleek.turnservice.dataprovider.TurnMongoRepository;
+import com.onfleek.turnservice.dataprovider.database.TurnDatabaseDataProvider;
+import com.onfleek.turnservice.dataprovider.database.repository.TurnMongoRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

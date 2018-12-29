@@ -8,8 +8,11 @@ public class CreateTurnUseCase {
 
     private final CreateTurn createTurn;
 
-    public CreateTurnUseCase(CreateTurn createTurn) {
+    private final ExistsAccount existsAccount;
+
+    public CreateTurnUseCase(CreateTurn createTurn, ExistsAccount existsAccount) {
         this.createTurn = createTurn;
+        this.existsAccount = existsAccount;
     }
 
     public Turn createTurn(Turn newTurn) {
@@ -19,10 +22,14 @@ public class CreateTurnUseCase {
     }
 
     private void validateNewTurn(Turn newTurn) {
-        // TODO: source exists in account service
         if(StringUtils.isBlank(newTurn.getSource())) {
             throw new TurnBadRequestException("Source can not be blank");
         }
+
+        if(!existsAccount.exists(newTurn.getSource())) {
+            throw new TurnBadRequestException("Source username " + newTurn.getSource() + " doesn't exists");
+        }
+
     }
 
     private void composeTurn(Turn newTurn) {

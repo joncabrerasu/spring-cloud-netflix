@@ -2,6 +2,8 @@ package com.onfleek.turnservice.entrypoint;
 
 import com.onfleek.turnservice.core.usecase.CreateTurnUseCase;
 import com.onfleek.turnservice.core.usecase.TurnBadRequestException;
+import com.onfleek.turnservice.entrypoint.entity.Turn;
+import com.onfleek.turnservice.entrypoint.exception.BadRequestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

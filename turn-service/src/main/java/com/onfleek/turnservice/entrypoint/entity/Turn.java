@@ -1,4 +1,4 @@
-package com.onfleek.turnservice.entrypoint;
+package com.onfleek.turnservice.entrypoint.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

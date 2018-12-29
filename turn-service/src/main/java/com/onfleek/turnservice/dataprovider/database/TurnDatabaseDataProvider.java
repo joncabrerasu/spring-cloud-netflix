@@ -1,6 +1,8 @@
-package com.onfleek.turnservice.dataprovider;
+package com.onfleek.turnservice.dataprovider.database;
 
 import com.onfleek.turnservice.core.usecase.CreateTurn;
+import com.onfleek.turnservice.dataprovider.database.entity.Turn;
+import com.onfleek.turnservice.dataprovider.database.repository.TurnMongoRepository;
 
 public class TurnDatabaseDataProvider implements CreateTurn {
 

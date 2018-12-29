@@ -1,4 +1,4 @@
-package com.onfleek.turnservice.dataprovider;
+package com.onfleek.turnservice.dataprovider.database.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
