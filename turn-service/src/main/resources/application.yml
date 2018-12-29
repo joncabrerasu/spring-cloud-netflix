@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: turn-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+server:
+  port: 33736
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
