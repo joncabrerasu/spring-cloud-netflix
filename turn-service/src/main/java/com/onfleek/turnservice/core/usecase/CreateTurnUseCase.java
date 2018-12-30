@@ -29,7 +29,6 @@ public class CreateTurnUseCase {
         if(!existsAccount.exists(newTurn.getSource())) {
             throw new TurnBadRequestException("Source username " + newTurn.getSource() + " doesn't exists");
         }
-
     }
 
     private void composeTurn(Turn newTurn) {
