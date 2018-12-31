@@ -1,7 +1,7 @@
 package com.onfleek.account.entrypoints;
 
-import com.onfleek.account.core.usecase.AccountAlreadyExistsException;
-import com.onfleek.account.core.usecase.AccountNotFoundException;
+import com.onfleek.account.core.usecase.exception.AccountAlreadyExistsException;
+import com.onfleek.account.core.usecase.exception.AccountNotFoundException;
 import com.onfleek.account.core.usecase.CreateAccountUseCase;
 import com.onfleek.account.core.usecase.GetAccountUseCase;
 import org.springframework.http.HttpStatus;

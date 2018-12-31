@@ -1,6 +1,8 @@
 package com.onfleek.account.core.usecase;
 
 import com.onfleek.account.core.entity.Account;
+import com.onfleek.account.core.usecase.exception.AccountNotFoundException;
+
 import java.util.Optional;
 
 public class GetAccountUseCase {

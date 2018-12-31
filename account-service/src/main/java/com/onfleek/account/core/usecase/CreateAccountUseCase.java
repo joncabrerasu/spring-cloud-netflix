@@ -1,6 +1,7 @@
 package com.onfleek.account.core.usecase;
 
 import com.onfleek.account.core.entity.Account;
+import com.onfleek.account.core.usecase.exception.AccountAlreadyExistsException;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.Optional;
