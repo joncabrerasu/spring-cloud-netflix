@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface AccountClient {
 
     @GetMapping("/accounts/{username}")
-    Object getAccount(@PathVariable("userName") String userName);
+    Object getAccount(@PathVariable("username") String username);
 
 }
