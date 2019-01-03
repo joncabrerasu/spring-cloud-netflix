@@ -1,4 +1,4 @@
-package com.onfleek.account.entrypoints;
+package com.onfleek.account.entrypoints.rest.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

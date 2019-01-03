@@ -1,9 +1,12 @@
-package com.onfleek.account.entrypoints;
+package com.onfleek.account.entrypoints.rest;
 
 import com.onfleek.account.core.usecase.exception.AccountAlreadyExistsException;
 import com.onfleek.account.core.usecase.exception.AccountNotFoundException;
 import com.onfleek.account.core.usecase.CreateAccountUseCase;
 import com.onfleek.account.core.usecase.GetAccountUseCase;
+import com.onfleek.account.entrypoints.rest.entity.Account;
+import com.onfleek.account.entrypoints.rest.exception.AlreadyExistsException;
+import com.onfleek.account.entrypoints.rest.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,17 +45,17 @@ public class AccountController {
         }
     }
 
-    public Account map(com.onfleek.account.core.entity.Account account) {
+    private Account map(com.onfleek.account.core.entity.Account account) {
         Account result = new Account();
         result.setUsername(account.getUsername());
-        result.setGivenName(account.getUsername());
+        result.setGivenName(account.getGivenName());
         result.setRole(account.getRole());
         result.setSurName(account.getSurName());
         result.setId(account.getId());
         return result;
     }
 
-    public com.onfleek.account.core.entity.Account map(Account account) {
+    private com.onfleek.account.core.entity.Account map(Account account) {
         com.onfleek.account.core.entity.Account result = new com.onfleek.account.core.entity.Account();
         result.setUsername(account.getUsername());
         result.setGivenName(account.getUsername());

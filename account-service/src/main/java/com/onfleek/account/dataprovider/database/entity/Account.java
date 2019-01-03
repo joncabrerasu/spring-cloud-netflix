@@ -1,4 +1,4 @@
-package com.onfleek.account.dataprovider;
+package com.onfleek.account.dataprovider.database.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

@@ -1,7 +1,8 @@
-package com.onfleek.account.dataprovider;
+package com.onfleek.account.dataprovider.database;
 
 import com.onfleek.account.core.usecase.CreateAccount;
 import com.onfleek.account.core.usecase.GetAccount;
+import com.onfleek.account.dataprovider.database.entity.Account;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.onfleek.account.entrypoints;
+package com.onfleek.account.entrypoints.rest.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
